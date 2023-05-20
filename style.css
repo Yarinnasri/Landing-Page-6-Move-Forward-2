@@ -1,0 +1,141 @@
+*,
+*::before,
+*::after {
+  /* Global Styles */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Heebo", sans-serif;
+}
+
+.imgControl {
+  /* Blue Background Styles */
+  background-image: url(./images/move\ forward.png);
+  background-position: center;
+  background-size: cover;
+
+  position: relative;
+  top: -80px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 565px;
+  text-align: center;
+}
+
+h1 {
+  color: #d2e10f;
+  font-size: 3.75rem;
+  margin: 32px 0 16px;
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+
+.imgControl p {
+  color: #f6f6f7;
+  font-size: 0.9rem;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  margin: 0 32px;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  color: #2c2c2c;
+  font-size: 0.75rem;
+}
+
+input {
+  height: 40px;
+  width: 300px;
+  background-color: #f6f6f7;
+  border-style: hidden;
+  border-bottom: 4px solid #d2e10f;
+  font-size: 1rem;
+  padding: 8px;
+}
+
+button {
+  background-color: #d2e10f;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+
+  width: 150px;
+  height: 40px;
+  margin-top: 1rem;
+  padding: 6px 16px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:active {
+  background-color: #a3ae0d;
+  transform: scale(0.9);
+}
+
+@media screen and (max-width: 880px) {
+  /* Medium Screen Width */
+  .imgControl {
+    min-height: 440px;
+  }
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  form {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  /* Small Screen Width */
+  .imgControl {
+    min-height: 360px;
+  }
+
+  p {
+    max-width: 80%;
+  }
+
+  form > div,
+  input,
+  button {
+    max-width: 300px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-height: 620px) {
+  /* Without This Condition, There Will Be A Scrolling Option */
+  .imgControl {
+    top: -80px;
+    min-height: 275px;
+    max-height: 300px;
+  }
+
+  h1 {
+    font-size: 1.25rem;
+  }
+
+  main section:nth-child(2) {
+    position: relative;
+    top: -70px;
+  }
+}
